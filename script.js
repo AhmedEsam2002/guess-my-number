@@ -20,6 +20,7 @@ const h1Element = document.querySelector('h1');
 const winSound = document.querySelector('.win-sound');
 const loseSound = document.querySelector('.lose-sound');
 const clickSound = document.querySelector('.click-sound');
+const video = document.getElementById('horrorVideo');
 //variables
 let guessedNumber = Math.floor(Math.random() * 20) + 1;
 let highScore = 0;
@@ -103,10 +104,27 @@ againButton.addEventListener('click', Reset);
 // Copy event listener
 const contentElement = h1Element.textContent;
 h1Element.addEventListener('copy', () => {
-  h1Element.textContent = 'You copied Me 😂';
+  // Change the text to 'Help Me Please!' and show it for 3 seconds
+  h1Element.textContent = 'Help Me Please!🆘';
+
+  // Restore the original text after 3 seconds
   setTimeout(() => {
-    h1Element.textContent = contentElement;
-  }, 1000);
+    h1Element.textContent = contentElement; // Restore original text
+  }, 3000); // Show for 3000 milliseconds (3 seconds)
+
+  // Show video after the message is displayed
+
+  // Play the video after a 3-second delay
+  setTimeout(() => {
+    video.style.display = 'block'; // Show video
+    video.play();
+  }, 3000); // Start playing after 3 seconds
+
+  // Hide the video when it ends
+  video.addEventListener('ended', () => {
+    video.pause();
+    video.style.display = 'none'; // Hide video again
+  });
 });
 // Add event listener for the "Enter" key press on the guess input
 document.addEventListener('keydown', event => {
