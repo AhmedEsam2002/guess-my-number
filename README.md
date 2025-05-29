@@ -256,14 +256,4 @@ To run this project locally, follow these steps:
 1. Clone this repository.
 2. Open the `index.html` file in your web browser.
 
-## How to Contribute
 
-If you want to contribute to this project, feel free to fork the repository and submit a pull request. For any questions, please reach out.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
----
-
-Feel free to customize the README as necessary, especially the image link and live demo link. This should provide clear instructions and explanations for anyone who wants to understand or contribute to your project!
